@@ -10,13 +10,8 @@ const app = express();
 app.use(express.json());
 
 
-// Configure CORS
-const corsOptions = {
-  origin: process.env.CLIENT_URL || 'http://localhost:5174', // Allow this origin (frontend)
-  methods: 'GET,POST,PUT,DELETE', // Allowed HTTP methods
-  credentials: true, // Allow cookies to be sent
-};
-app.use(cors(corsOptions)); // Apply CORS middleware
+
+app.use(cors()); // Apply CORS middleware
 
 // Routes
 app.use('/api/auth', authRoutes);
