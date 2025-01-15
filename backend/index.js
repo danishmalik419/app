@@ -1,8 +1,8 @@
 require('dotenv').config();
 const express = require('express');
 const cors = require('cors'); // Import CORS middleware
-const connectDB = require('./utils/db');
-const authRoutes = require('./routes/authRoutes');
+const connectDB = require('./src/utils/db');
+const authRoutes = require('./src/routes/authRoutes');
 
 const app = express();
 
