@@ -112,7 +112,7 @@ exports.forgotPassword = async (req, res) => {
     user.resetPasswordExpire = Date.now() + 10 * 60 * 1000; // Token valid for 10 minutes
     await user.save();
 
-    const resetUrl = `${req.protocol}://localhost:5173/reset-password/${resetToken}`;
+    const resetUrl = `https://appfrontend-danish.netlify.app/reset-password/${resetToken}`;
     const message = `You requested a password reset. Please use the link below to reset your password:\n\n${resetUrl}`;
 
     await sendEmail(user.email, 'Password Reset Request', message);
