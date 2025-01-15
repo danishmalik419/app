@@ -20,6 +20,9 @@ app.use(cors(corsOptions)); // Apply CORS middleware
 
 // Routes
 app.use('/api/auth', authRoutes);
+app.use('/', (req, res) => {
+  res.send('Welcome to the Home Page!');
+});
 
 // Connect DB and Start Server
 const PORT = process.env.PORT || 5000;
