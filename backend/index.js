@@ -20,7 +20,7 @@ app.use(cors(corsOptions)); // Apply CORS middleware
 
 // Routes
 app.use('/api/auth', authRoutes);
-app.use('/', (req, res) => {
+app.get('/', (req, res) => {
   res.send('Welcome to the Home Page!');
 });
 
