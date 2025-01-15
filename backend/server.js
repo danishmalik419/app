@@ -11,7 +11,7 @@ app.use(express.json());
 
 
 
-app.use(cors()); // Apply CORS middleware
+app.use(cors()); 
 
 // Routes
 app.use('/api/auth', authRoutes);

@@ -24,7 +24,7 @@ exports.register = async (req, res) => {
       { expiresIn: '10m' }
     );
 
-    const verificationUrl = `https://appbackend-danish.netlify.app/api/auth/verify-email/${verificationToken}`;
+    const verificationUrl = `https://app-4p89.onrender.com/api/auth/verify-email/${verificationToken}`;
     const message = `Verify your email by clicking the link below:\n\n${verificationUrl}`;
 
     await sendEmail(email, 'Email Verification', message);
